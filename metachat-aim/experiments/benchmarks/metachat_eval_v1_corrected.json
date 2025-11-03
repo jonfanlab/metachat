@@ -1,0 +1,920 @@
+{
+  "problems": [
+    {
+      "id": "Pe5527726",
+      "problem_type": "single_step",
+      "problem_statement": "What is the numerical aperture of a structure submerged in water with an exit half-angle of 30deg.?",
+      "expected_approach": "NA=n*sin(theta), with n=1.33 and theta=30deg.",
+      "answer": "0.665",
+      "difficulty": 2,
+      "contributor": "Robert"
+    },
+    {
+      "id": "Pdd391854",
+      "problem_type": "single_step",
+      "problem_statement": "What is the lens power of a lens with focal length 30um?",
+      "expected_approach": "P=1/f",
+      "answer": "33333.33",
+      "difficulty": 1,
+      "contributor": "Robert"
+    },
+    {
+      "id": "P602077b0",
+      "problem_type": "multi_step",
+      "problem_statement": "What is the f number of a lens with an exit half-angle of 15deg in air?",
+      "expected_approach": "First calculate the numerical aperture before finding the f-number. N=1/(2*NA)",
+      "answer": "1.932",
+      "difficulty": 4,
+      "contributor": "Robert"
+    },
+    {
+      "id": "Pd904deef",
+      "problem_type": "multi_step",
+      "problem_statement": "What is the numerical aperture of a structure submerged in water with an exit full-angle of 30deg.?",
+      "expected_approach": "First find the half-angle, by simply dividing by 2, before plugging into NA=n*sin(theta)",
+      "answer": "0.3455",
+      "difficulty": 3,
+      "contributor": "Robert"
+    },
+    {
+      "id": "Pca506a26",
+      "problem_type": "direct_function_call",
+      "problem_statement": "Design a metalens with the refractive_index of 2.4, lens_diameter of 100um, focal length of 50um, a thickness of 500nm, at a wavelength of 600nm.",
+      "expected_approach": "Direct function call to WAVEYNET_API.design_metalens(refractive_index, lens_diameter [m], focal_length [m], thickness [m], operating_wavelength [m])",
+      "answer": "WAVEYNET_API.design_metalens(2.4, 100e-6, 50e-6, 500e-9, 600e-9)",
+      "difficulty": 1,
+      "contributor": "Robert"
+    },
+    {
+      "id": "P2c14102b",
+      "problem_type": "multi_step_function_call",
+      "problem_statement": "Design a metalens with the refractive index of titanium dioxide at 600nm with a height of 500nm and a diameter of 100um with a focal length of 200um.",
+      "expected_approach": "First find the refractive index of TiO2 at 600nm, 2.6, then enter into  WAVEYNET_API.design_metalens(refractive_index, lens_diameter [m], focal_length [m], thickness [m], operating_wavelength [m])",
+      "answer": "WAVEYNET_API.design_metalens(2.6, 100e-6, 200e-6, 500e-9, 600e-9)",
+      "difficulty": 3,
+      "contributor": "Robert"
+    },
+    {
+      "id": "P005bc5ee",
+      "problem_type": "single_step",
+      "problem_statement": "How much phase is accumulated when a plane wave of 500 nm wavelength go through a 300nm-thick portion of a medium with a refractive index of 2 at the angle of 15 degrees?",
+      "expected_approach": "phase = n * 2 *pi / lambda * d * cos(theta), with n = 2, lambda = 500 nm, d = 300 nm, and theta = 15 deg.",
+      "answer": "7.2829 radian",
+      "difficulty": 2,
+      "contributor": "Yixuan"
+    },
+    {
+      "id": "Pe82024f4",
+      "problem_type": "single_step",
+      "problem_statement": "A single-mode optical fiber has a loss of 0.25 dB/km. The transmitted signal has an average power of 0 dBm. The receiver requires an average power of at least -30 dBm in order to achieve sufficiently low error probability. What is the maximum fiber length over which the signal can be transmitted?",
+      "expected_approach": "maximum distance = loss / (loss rate) = (0 dBm - (-30 dBm)) / 0.25 dBm / km",
+      "answer": "120 km",
+      "difficulty": 2,
+      "contributor": "Yixuan"
+    },
+    {
+      "id": "P426c881d",
+      "problem_type": "single_step",
+      "problem_statement": "What's the in-medium wavelength of 500 THz light in glass with a refractive index of 1.5?",
+      "expected_approach": "lambda = c / f / n, with c = 3*10^8 m/s, f=500THz, n = 1.5",
+      "answer": "400 nm",
+      "difficulty": 1,
+      "contributor": "Yixuan"
+    },
+    {
+      "id": "Pcbc4942b",
+      "problem_type": "single_step",
+      "problem_statement": "What is the radius of the diffraction limited airy disk size of an imaging system with 500 nm wavelength, and f number of 2?",
+      "expected_approach": "r = 1.22 * lambda * f/#, lambda = 500 nm, f/# = 2",
+      "answer": "1.22 um",
+      "difficulty": 1,
+      "contributor": "Yixuan"
+    },
+    {
+      "id": "P640c9e50",
+      "problem_type": "single_step",
+      "problem_statement": "Calculate the numerical aperture of an optical fiber with core refractive index 1.48 and cladding refractive index 1.46.",
+      "expected_approach": "NA = sqrt(n1^2 - n2^2)",
+      "answer": "0.242",
+      "difficulty": 1,
+      "contributor": "Tianxiang"
+    },
+    {
+      "id": "P52743da9",
+      "problem_type": "single_step",
+      "problem_statement": "What is the magnification of an image formed by a lens with object distance 20cm and image distance 40cm?",
+      "expected_approach": "m = -di/do",
+      "answer": "-2",
+      "difficulty": 1,
+      "contributor": "Tianxiang"
+    },
+    {
+      "id": "P900852c7",
+      "problem_type": "single_step",
+      "problem_statement": "Calculate the critical angle for a glass-air interface where glass has refractive index 1.5.",
+      "expected_approach": "\u03b8c = arcsin(n2/n1) where n2=1 (air)",
+      "answer": "41.8 degrees",
+      "difficulty": 1,
+      "contributor": "Tianxiang"
+    },
+    {
+      "id": "P983e6915",
+      "problem_type": "single_step",
+      "problem_statement": "What is the resolving power of a diffraction grating with 1200 lines/mm at first order if the width of the grating is 10mm?",
+      "expected_approach": "R = mN where N is total number of lines",
+      "answer": "12000",
+      "difficulty": 1,
+      "contributor": "Tianxiang"
+    },
+    {
+      "id": "P88e42afb",
+      "problem_type": "single_step",
+      "problem_statement": "Calculate the Brewster angle for light incident on water (n=1.33) from air.",
+      "expected_approach": "\u03b8B = arctan(n2/n1)",
+      "answer": "53.1 degrees",
+      "difficulty": 2,
+      "contributor": "Tianxiang"
+    },
+    {
+      "id": "Pa673e4e3",
+      "problem_type": "single_step",
+      "problem_statement": "What is the minimum thickness of an anti-reflection coating (n=1.38) for light at 550nm?",
+      "expected_approach": "t = \u03bb/(4n)",
+      "answer": "99.64 nm",
+      "difficulty": 2,
+      "contributor": "Tianxiang"
+    },
+    {
+      "id": "P9894c019",
+      "problem_type": "single_step",
+      "problem_statement": "Calculate the focal length of two thin lenses (f1=10cm, f2=20cm) in contact.",
+      "expected_approach": "1/f = 1/f1 + 1/f2",
+      "answer": "6.67 cm",
+      "difficulty": 2,
+      "contributor": "Tianxiang"
+    },
+    {
+      "id": "P6fd1e8b7",
+      "problem_type": "single_step",
+      "problem_statement": "What is the numerical aperture of a lens system with f-number 2.8?",
+      "expected_approach": "NA = 1/(2F#)",
+      "answer": "0.179",
+      "difficulty": 2,
+      "contributor": "Tianxiang"
+    },
+    {
+      "id": "P71ccea36",
+      "problem_type": "single_step",
+      "problem_statement": "Calculate the angular dispersion of a diffraction grating with 600 lines/mm at 500nm.",
+      "expected_approach": "d\u03b8/d\u03bb = m/(d*cos(\u03b8))",
+      "answer": "628971 rad/m",
+      "difficulty": 2,
+      "contributor": "Tianxiang"
+    },
+    {
+      "id": "Pe758c531",
+      "problem_type": "single_step",
+      "problem_statement": "What is the coherence length of a laser with linewidth 0.1nm at 800nm?",
+      "expected_approach": "Lc = \u03bb^2/\u0394\u03bb",
+      "answer": "6.4 mm",
+      "difficulty": 2,
+      "contributor": "Tianxiang"
+    },
+    {
+      "id": "P8b7bc63c",
+      "problem_type": "single_step",
+      "problem_statement": "Calculate the acceptance angle of a fiber with numerical aperture 0.22.",
+      "expected_approach": "\u03b8max = arcsin(NA)",
+      "answer": "12.71 degrees",
+      "difficulty": 2,
+      "contributor": "Tianxiang"
+    },
+    {
+      "id": "P1245a155",
+      "problem_type": "single_step",
+      "problem_statement": "What is the group velocity dispersion in silica at 1550nm given D=-20 ps/(nm\u00b7km)?",
+      "expected_approach": "GVD = -\u03bb^2*D/(2\u03c0c)",
+      "answer": "2.55e-26 s^2/m or 25.5 ps^2/km",
+      "difficulty": 3,
+      "contributor": "Tianxiang"
+    },
+    {
+      "id": "Pe59b31b7",
+      "problem_type": "single_step",
+      "problem_statement": "Calculate the Rayleigh range for a Gaussian beam with waist 50\u03bcm at 633nm.",
+      "expected_approach": "zR = \u03c0w0^2/\u03bb",
+      "answer": "12.4 mm",
+      "difficulty": 4,
+      "contributor": "Tianxiang"
+    },
+    {
+      "id": "Pb0c8d2cc",
+      "problem_type": "single_step",
+      "problem_statement": "What is the free spectral range of a Fabry-Perot cavity with length 1cm?",
+      "expected_approach": "FSR = c/(2nL)",
+      "answer": "15 GHz",
+      "difficulty": 3,
+      "contributor": "Tianxiang"
+    },
+    {
+      "id": "Pbdb06d3e",
+      "problem_type": "single_step",
+      "problem_statement": "Calculate the walk-off angle in a birefringent calcite crystal (ne=1.486, no=1.658) at 45\u00b0.",
+      "expected_approach": "\u03c1 = arctan((ne2/no2)*tan(\u03b8)) - \u03b8",
+      "answer": "6.2 degrees",
+      "difficulty": 4,
+      "contributor": "Tianxiang"
+    },
+    {
+      "id": "Pe6b7f3bf",
+      "problem_type": "multi_step",
+      "problem_statement": "Find the minimum spot size of a focused Gaussian beam through a lens with NA=0.5 at 1064nm wavelength.",
+      "expected_approach": "1. Calculate the diffraction limit (d = 1.22\u03bb/NA) 2. Compare with Gaussian beam waist (w0 = \u03bb/(\u03c0NA))",
+      "answer": "0.677 \u03bcm",
+      "difficulty": 4,
+      "contributor": "Tianxiang"
+    },
+    {
+      "id": "P6073ca0a",
+      "problem_type": "multi_step",
+      "problem_statement": "What is the coupling efficiency between two single-mode fibers with mode field diameters of 10\u03bcm and 8\u03bcm?",
+      "expected_approach": "1. Calculate mode overlap integral 2. Square the result",
+      "answer": "0.947",
+      "difficulty": 4,
+      "contributor": "Tianxiang"
+    },
+    {
+      "id": "P742aad48",
+      "problem_type": "multi_step",
+      "problem_statement": "Calculate the group delay through 1km of fiber with n=1.45 and dn/d\u03bb=0.01 \u03bcm^-1 at 1550nm.",
+      "expected_approach": "1. Calculate group index (ng = n - \u03bbdn/d\u03bb) 2. Find delay (t = L*ng/c)",
+      "answer": "4.785 \u03bcs",
+      "difficulty": 4,
+      "contributor": "Tianxiang"
+    },
+    {
+      "id": "Pac36c3e8",
+      "problem_type": "multi_step",
+      "problem_statement": "Find the deflection angle for an optical vacuum wavelength of 1550nm of an acousto-optic deflector with acoustic frequency 100MHz and acoustic velocity 4200m/s in TeO2. Make sure to calculate the internal angle of deflection inside the material.",
+      "expected_approach": "1. Calculate acoustic wavelength 2. Use Bragg equation for deflection",
+      "answer": "0.936 degrees",
+      "difficulty": 4,
+      "contributor": "Tianxiang"
+    },
+    {
+      "id": "P5605478d",
+      "problem_type": "multi_step",
+      "problem_statement": "What is the required grating period for a fiber Bragg grating reflecting 1550nm at normal incidence?",
+      "expected_approach": "1. Use Bragg condition (\u03bbB = 2neff\u039b) 2. Solve for \u039b given neff=1.45",
+      "answer": "534.5 nm",
+      "difficulty": 4,
+      "contributor": "Tianxiang"
+    },
+    {
+      "id": "P66022c7c",
+      "problem_type": "multi_step",
+      "problem_statement": "Find the material dispersion parameter D for BK7 glass at 800nm.",
+      "expected_approach": "1. Calculate n(\u03bb) 2. Find second derivative 3. Convert to D",
+      "answer": "-4.929E+5 ps/(nm\u00b7km)",
+      "difficulty": 4,
+      "contributor": "Tianxiang"
+    },
+    {
+      "id": "P2a0259df",
+      "problem_type": "multi_step",
+      "problem_statement": "What is the coupling length for complete power transfer between two waveguides separated by 1\u03bcm with effective indices 1.5 and propagation constant difference 100/m?",
+      "expected_approach": "1. Calculate coupling coefficient 2. Find length for complete power transfer",
+      "answer": "15.7 mm",
+      "difficulty": 4,
+      "contributor": "Tianxiang"
+    },
+    {
+      "id": "Pc9671f5d",
+      "problem_type": "direct_function_call",
+      "problem_statement": "Design a metalens with silicon nitride (n=2.0) for visible light focusing at 400nm, with diameter 50\u03bcm and focal length 100\u03bcm.",
+      "expected_approach": "direct call to WAVEYNET_API.design_metalens(refractive_index, lens_diameter [m], focal_length [m], thickness [m], operating_wavelength [m])",
+      "answer": "WAVEYNET_API.design_metalens(2.0, 50e-6, 100e-6, <reasonable thickness>, 400e-9)",
+      "difficulty": 1,
+      "contributor": "Tianxiang"
+    },
+    {
+      "id": "P3c3878ae",
+      "problem_type": "direct_function_call",
+      "problem_statement": "Create a metalens using GaN (n=2.3) for UV operation at 350nm with 200\u03bcm diameter and 500\u03bcm focal length.",
+      "expected_approach": "direct call to WAVEYNET_API.design_metalens(refractive_index, lens_diameter [m], focal_length [m], thickness [m], operating_wavelength [m])",
+      "answer": "WAVEYNET_API.design_metalens(2.3, 200e-6, 500e-6, <reasonable thickness>, 350e-9)",
+      "difficulty": 1,
+      "contributor": "Tianxiang"
+    },
+    {
+      "id": "Pf03d440a",
+      "problem_type": "direct_function_call",
+      "problem_statement": "Design a 1600nm-long, 500nm-thick superpixel with silicon (n=3.5) for 45-degree deflection at 1550nm.",
+      "expected_approach": "direct call to WAVEYNET_API.design_superpixel(refractive_index, length [m], incident_angle [deg], diffraction_angle [deg], thickness [m], operating_wavelength [m])",
+      "answer": "WAVEYNET_API.design_superpixel(3.5, 1600e-9, 0, 45, 500e-9, 1550e-9)",
+      "difficulty": 2,
+      "contributor": "Tianxiang"
+    },
+    {
+      "id": "P50b432a4",
+      "problem_type": "direct_function_call",
+      "problem_statement": "Design a 150\u03bcm wide metalens using amorphous silicon (n=3.6) for near-IR focusing 300\u03bcm away.",
+      "expected_approach": "direct call to WAVEYNET_API.design_metalens(refractive_index, lens_diameter [m], focal_length [m], thickness [m], operating_wavelength [m])",
+      "answer": "WAVEYNET_API.design_metalens(3.6, 150e-6, 300e-6, <reasonable thickness>, <near-IR wavelength>)",
+      "difficulty": 1,
+      "contributor": "Tianxiang"
+    },
+    {
+      "id": "P34b45928",
+      "problem_type": "direct_function_call",
+      "problem_statement": "Create a 500nm-thick superpixel deflector that's 1000nm long with SiO2 (n=1.45) that deflects 15-degree incident light to 30-degrees in the opposite direction of the incident light at 500nm.",
+      "expected_approach": "direct call to WAVEYNET_API.design_superpixel(refractive_index, length [m], incident_angle [deg], diffraction_angle [deg], thickness [m], operating_wavelength [m])",
+      "answer": "WAVEYNET_API.design_superpixel(1.45, 1000e-9, 15, -30, 500e-9, 500e-9)",
+      "difficulty": 1,
+      "contributor": "Tianxiang"
+    },
+    {
+      "id": "P9a678286",
+      "problem_type": "single_step",
+      "problem_statement": "Calculate the group velocity in a medium with ng=1.5",
+      "expected_approach": "vg = c/ng where c is speed of light",
+      "answer": "2x10\u2078 m/s",
+      "difficulty": 1,
+      "contributor": "Tianxiang"
+    },
+    {
+      "id": "P13729455",
+      "problem_type": "single_step",
+      "problem_statement": "Calculate the minimum thickness for a quarter-wave plate made of quartz (with a difference in refractive index between ordinary and extraordinary rays of 0.009) at 500nm wavelength",
+      "expected_approach": "d = \u03bb/(4n) where \u03bb is wavelength and n is refractive index",
+      "answer": "13.89 \u00b5m",
+      "difficulty": 1,
+      "contributor": "Tianxiang"
+    },
+    {
+      "id": "Pa0b43b0b",
+      "problem_type": "single_step",
+      "problem_statement": "What is the propagation loss in dB for a 5cm waveguide with loss coefficient 2dB/cm?",
+      "expected_approach": "Loss = \u03b1*L where \u03b1 is loss coefficient and L is length",
+      "answer": "10 dB",
+      "difficulty": 1,
+      "contributor": "Tianxiang"
+    },
+    {
+      "id": "Pb33aebdd",
+      "problem_type": "single_step",
+      "problem_statement": "Calculate the phase matching length for second harmonic generation with \u0394k=100/cm",
+      "expected_approach": "Lc = \u03c0/\u0394k where \u0394k is phase mismatch",
+      "answer": "314 \u00b5m",
+      "difficulty": 2,
+      "contributor": "Tianxiang"
+    },
+    {
+      "id": "Pdbd9e69b",
+      "problem_type": "multi_step",
+      "problem_statement": "What is the required grating period for coupling 1550nm light into a waveguide with effective index 2.4 at a 30 degree angle between the incident light propagation direction and the waveguide axis?",
+      "expected_approach": "1. Calculate k-vector mismatch using k-vector conservation, 2. Convert to grating period using \u039b=2\u03c0/\u0394k",
+      "answer": "1.013 \u00b5m",
+      "difficulty": 2,
+      "contributor": "Tianxiang"
+    },
+    {
+      "id": "P151b3010",
+      "problem_type": "multi_step",
+      "problem_statement": "Calculate the numerical aperture of a graded-index fiber with core index 1.5 and index difference 0.01",
+      "expected_approach": "1. Calculate cladding index using \u0394n, 2. Use NA formula with both indices",
+      "answer": "0.173",
+      "difficulty": 3,
+      "contributor": "Tianxiang"
+    },
+    {
+      "id": "P4de79672",
+      "problem_type": "multi_step",
+      "problem_statement": "Find the required thickness of a half-wave plate for 800nm light in a material with ordinary index 1.5 and extraordinary index 1.6",
+      "expected_approach": "1. Calculate birefringence (ne-no), 2. Use d=\u03bb/(2\u0394n)",
+      "answer": "4 \u00b5m",
+      "difficulty": 3,
+      "contributor": "Tianxiang"
+    },
+    {
+      "id": "Pbcd0777b",
+      "problem_type": "multi_step",
+      "problem_statement": "What is the required phase shift between elements of a 4-element phased array for 30\u00b0 beam steering, where there is a distance of half-lambda between elements?",
+      "expected_approach": "1. Calculate k-vector component, 2. Convert to phase using \u03c6=kd*sin(\u03b8)",
+      "answer": "+/- pi/2 radians",
+      "difficulty": 3,
+      "contributor": "Tianxiang"
+    },
+    {
+      "id": "Pb1a4faf9",
+      "problem_type": "multi_step",
+      "problem_statement": "Find the Q-factor of a ring resonator with 99% roundtrip efficiency, a radius of 10 µm, a refractive index of 1.5, and operating at a wavelength of 1.55 µm.",
+      "expected_approach": "1. Calculate roundtrip loss, 2. Use Q=2\u03c0nL/(\u03bb\u03b1)",
+      "answer": "38205",
+      "difficulty": 4,
+      "contributor": "Tianxiang"
+    },
+    {
+      "id": "P9cb04cbe",
+      "problem_type": "multi_step_function_call",
+      "problem_statement": "Design a 500nm-thick, 1200nm-wide superpixel using silicon dioxide at 800nm for 50\u00b0 deflection",
+      "expected_approach": "1. Find SiO2 refractive index at 800nm (n=1.45), 2. Call WAVEYNET_API.design_superpixel(refractive_index, length [m], incident_angle [deg], diffraction_angle [deg], thickness [m], operating_wavelength [m])",
+      "answer": "WAVEYNET_API.design_superpixel(1.45, 1200e-9, 0, 50, 500e-9, 800e-9)",
+      "difficulty": 1,
+      "contributor": "Tianxiang"
+    },
+    {
+      "id": "Pb6e745f1",
+      "problem_type": "single_step",
+      "problem_statement": "For a dielectric slab waveguide with core index n1=1.473 and cladding index n2=1.467, and thickness of 2um, what's the cut-off wavelength for TE1 mode?",
+      "expected_approach": "\u03bb = 2d*sqrt(n1^2-n2^2)",
+      "answer": "531 nm",
+      "difficulty": 2,
+      "contributor": "Chenkai"
+    },
+    {
+      "id": "P8055b191",
+      "problem_type": "single_step",
+      "problem_statement": "For a circular waveguide with core index n1=1.45675 and cladding index n2=1.45332, and core radius of 2um, what's the cut-off wavelength?",
+      "expected_approach": "\u03bb = 2\u03c0r/2.405*sqrt(n1^2-n2^2)",
+      "answer": "522nm",
+      "difficulty": 2,
+      "contributor": "Chenkai"
+    },
+    {
+      "id": "Pd7a734e1",
+      "problem_type": "multi_step",
+      "problem_statement": "What's the reflectivity of a TE polarized light incident from air to water with an angle of 20 degrees? ",
+      "expected_approach": "Solve 2 equations: (1) n1sin\u03b81 = n2sin\u03b82  (2) R = |(n1cos\u03b81 - n2cos\u03b82)/(n1cos\u03b81+n2cos\u03b82)|^2, plug in values: \u03b81=20\u00b0, n1=1, n2=1.333",
+      "answer": "0.0245",
+      "difficulty": 5,
+      "contributor": "Chenkai"
+    },
+    {
+      "id": "P27289c94",
+      "problem_type": "multi_step",
+      "problem_statement": "What's the transmittance of a TM polarized light incident from air to water with an angle of 20 degrees? ",
+      "expected_approach": "Solve 2 equations: (1) n1sin\u03b81 = n2sin\u03b82  (2) T = 1 - |(n2cos\u03b81 - n1cos\u03b82)/(n2cos\u03b81+n1cos\u03b82)|^2, plug in values: \u03b81=20\u00b0, n1=1, n2=1.333",
+      "answer": "0.9834",
+      "difficulty": 5,
+      "contributor": "Chenkai"
+    },
+    {
+      "id": "P48bf2282",
+      "problem_type": "single_step",
+      "problem_statement": "For a silica fiber Bragg grating with a grating period of 0.5 μm and a thermal expansion coefficient of 8.3 × 10⁻⁶ °C⁻¹, what is the shift in the Bragg wavelength under a temperature change of 1°C, considering only the effect of thermal expansion and ignoring the thermo-optic effect?",
+      "expected_approach": "\u0394\u03bb = 2neff\u039b\u03b7\u0394T",
+      "answer": "12.04pm",
+      "difficulty": 1,
+      "contributor": "Chenkai"
+    },
+    {
+      "id": "P931ba434",
+      "problem_type": "single_step",
+      "problem_statement": "For a distributed Bragg reflector with 5 repeated pairs of silica (n=1.45) and titanium dioxide (n=2.50), what's its reflectivity? Assuming each layer is a quarter of wavelength.",
+      "expected_approach": "R = ((n2^(2N)-n1^(2N))/(n2^(2N)-n1^(2N)))^2",
+      "answer": "98.30%",
+      "difficulty": 2,
+      "contributor": "Chenkai"
+    },
+    {
+      "id": "P8a60a248",
+      "problem_type": "multi_step",
+      "problem_statement": "What are the ideal focal lengths of the convex and concave lenses, respectively, for an achromat with a 10cm total focal length? Design the first lens using N-BK7, Abbe # 64.17, and the second lens using F2, Abbe # 36.43.",
+      "expected_approach": "Derive from geometry or if memorized plug directly plug into f_1 = f_total * (V1-V2)/V1 and f_2 = f_total * (V2-V1)/V2",
+      "answer": "f_1 = 4.32cm and f_2 = -7.61cm",
+      "difficulty": 2,
+      "contributor": "Robert"
+    },
+    {
+      "id": "Pa76e3d53",
+      "problem_type": "multi_step",
+      "problem_statement": "What are the ideal focal lengths of the convex and concave lenses, respectively, for an achromat with a 12mm total focal length? Design the first lens using N-K7 (n(587.6nm)=1.5111, n(486.1nm)=1.5170, and n(656.3nm)=1.5085) and the second lens using N-SF5 (n(587.6nm)=1.6727, n(486.1nm)=1.6875, and n(656.3nm)=1.6666).",
+      "expected_approach": "1) Find the Abbe numbers of the two glasses using V_d = (n(587.6nm)-1) / (n(486.1nm)-n(656.3nm)) and 2) Derive from geometry or if memorized plug into f_1 = f_total * (V1-V2)/V1 and f_2 = f_total * (V2-V1)/V2",
+      "answer": "f_1 = 5.58mm and f_2 = -10.42mm",
+      "difficulty": 4,
+      "contributor": "Robert"
+    },
+    {
+      "id": "Pb8c43d89",
+      "problem_type": "multi_step",
+      "problem_statement": "What are the ideal focal lengths of the convex and concave lenses, respectively, for an achromat with a 1.8m total focal length? Design the first lens using N-LAK33B and the second lens using N-FK51A.",
+      "expected_approach": "1) Find the material indices at the Fraunhofer C, d, and F spectral lines; 2) Find the Abbe numbers using V_d = (n(587.6nm)-1) / (n(486.1nm)-n(656.3nm)); 3) Derive from geometry or if memorized plug into f_1 = f_total * (V1-V2)/V1 and f_2 = f_total * (V2-V1)/V2",
+      "answer": "f_1 = -1.10m and f_2 = 0.68m",
+      "difficulty": 6,
+      "contributor": "Robert"
+    },
+    {
+      "id": "Pa565ccea",
+      "problem_type": "multi_step",
+      "problem_statement": "If designing an ideal achromat with a total focal length of 10cm out of a cemented biconvex lens with a biconcave lens, what are the lens radii? Design the first lens using N-BK7, Abbe # 64.17, n_d=1.5168 and the second lens using F2, Abbe # 36.43, n_d=1.62. Assume the lenses are thin, cemented together, and optimized for minimal chromatic aberration. Assume the paraxial condition is met.",
+      "expected_approach": "Derive from geometry or if memorized plug directly into R_1 = 2*f_tot*((V1-V2)/V1)*(n_1-1) and R_2 = 2*f_tot*((V2-V1)/V2)*(n_2-1), where n_1 and n_2 are the n_d for the respective materials.",
+      "answer": "R_1 = 4.47cm and R_2 = -9.44cm",
+      "difficulty": 3,
+      "contributor": "Robert"
+    },
+    {
+      "id": "Pa901e576",
+      "problem_type": "multi_step",
+      "problem_statement": "If designing an ideal achromat with a total focal length of 12mm out of a cemented biconvex lens with a biconcave lens, what are the lens radii? Design the first lens using N-K7 (n(587.6nm)=1.5111, n(486.1nm)=1.5170, and n(656.3nm)=1.5085) and the second lens using N-SF5 (n(587.6nm)=1.6727, n(486.1nm)=1.6875, and n(656.3nm)=1.6666). Assume the lenses are thin, cemented together, and optimized for minimal chromatic aberration. Assume the paraxial condition is met.",
+      "expected_approach": "1) Find the Abbe numbers of the two glasses using V_d = (n(587.6nm)-1) / (n(486.1nm)-n(656.3nm)) and 2) Derive from geometry or if memorized plug directly into R_1 = 2*f_tot*((V1-V2)/V1)*(n_1-1) and R_2 = 2*f_tot*((V2-V1)/V2)*(n_2-1), where n_1 and n_2 are the n_d for the respective materials.",
+      "answer": "R_1 = 5.7mm and R_2 = -14.02mm",
+      "difficulty": 5,
+      "contributor": "Robert"
+    },
+    {
+      "id": "Pa514bad0",
+      "problem_type": "multi_step",
+      "problem_statement": "If designing an ideal achromat with a total focal length of 1.8m out of a cemented biconvex lens with a biconcave lens, what are the lens radii? Design the first lens using N-LAK33B and the second lens using N-FK51A. Assume the lenses are thin, cemented together, and optimized for minimal chromatic aberration. Assume the paraxial condition is met.",
+      "expected_approach": "1) Find the material indices at the Fraunhofer C, d, and F spectral lines; 2) Find the Abbe numbers using V_d = (n(587.6nm)-1) / (n(486.1nm)-n(656.3nm)); 3) Derive from geometry or if memorized plug directly into R_1 = 2*f_tot*((V1-V2)/V1)*(n_1-1) and R_2 = 2*f_tot*((V2-V1)/V2)*(n_2-1), where n_1 and n_2 are the n_d for the respective materials. Assume the lenses are thin, cemented together, and optimized for minimal chromatic aberration. Assume the paraxial condition is met.",
+      "answer": "R_1 = -1.66m and R_2 = 0.66m",
+      "difficulty": 7,
+      "contributor": "Robert"
+    },
+    {
+      "id": "Pfca1f39d",
+      "problem_type": "multi_step",
+      "problem_statement": "What are the ideal lens radii of a cemented plano-convex/concave achromat with a total focal length of 10cm, where the flat sides of the lenses are cemented together? Design the first lens using N-BK7, Abbe # 64.17, n_d=1.5168 and the second lens using F2, Abbe # 36.43, n_d=1.62. Assume the lenses are thin, cemented together, and optimized for minimal chromatic aberration. Assume the paraxial condition is met.",
+      "expected_approach": "Derive from geometry or if memorized plug into R1 = f_tot * ((V1-V2)/V1)*(n_1-1) and R2 = f_tot * ((V1-V2)/V2)*(n_2-1), where n_1 and n_2 are the n_d for the respective materials.",
+      "answer": "R_1 = 2.23cm and R_2 = 4.72cm",
+      "difficulty": 4,
+      "contributor": "Robert"
+    },
+    {
+      "id": "P46937a4e",
+      "problem_type": "multi_step",
+      "problem_statement": "What are the ideal lens radii of a cemented plano-convex/concave achromat with a total focal length of 12mm, where the flat sides of the lenses are cemented together?  Design the first lens using N-K7 (n(587.6nm)=1.5111, n(486.1nm)=1.5170, and n(656.3nm)=1.5085) and the second lens using N-SF5 (n(587.6nm)=1.6727, n(486.1nm)=1.6875, and n(656.3nm)=1.6666). Assume the lenses are thin, cemented together, and optimized for minimal chromatic aberration. Assume the paraxial condition is met.",
+      "expected_approach": "1) Find the Abbe numbers of the two glasses using V_d = (n(587.6nm)-1) / (n(486.1nm)-n(656.3nm)) and 2) Derive from geometry or if memorized plug into R1 = f_tot * ((V1-V2)/V1)*(n_1-1) and R2 = f_tot * ((V1-V2)/V2)*(n_2-1), where n_1 and n_2 are the n_d for the respective materials.",
+      "answer": "R_1 = 2.85mm and R_2 = 7.01mm",
+      "difficulty": 6,
+      "contributor": "Robert"
+    },
+    {
+      "id": "P363f8d6f",
+      "problem_type": "multi_step",
+      "problem_statement": "What are the ideal lens radii of a cemented plano-convex/concave achromat with a total focal length of 1.8m, where the flat sides of the lenses are cemented together? Design the first lens using N-LAK33B and the second lens using N-FK51A. Assume the lenses are thin, cemented together, and optimized for minimal chromatic aberration. Assume the paraxial condition is met.",
+      "expected_approach": "1) Find the material indices at the Fraunhofer C, d, and F spectral lines; 2) Find the Abbe numbers using V_d = (n(587.6nm)-1) / (n(486.1nm)-n(656.3nm)); 3) Derive from geometry or if memorized plug into R1 = f_tot * ((V1-V2)/V1)*(n_1-1) and R2 = f_tot * ((V1-V2)/V2)*(n_2-1), where n_1 and n_2 are the n_d for the respective materials.",
+      "answer": "R_1 = -0.83m and R_2 = -0.33m",
+      "difficulty": 8,
+      "contributor": "Robert"
+    },
+    {
+      "id": "Pe1f471eb",
+      "problem_type": "multi_step_function_call",
+      "problem_statement": "Design the unit cell of an n=2.50, 500nm-thick periodic grating that deflects 500nm normally-incident light to 20 degrees. Make the length optimal for a periodic grating.",
+      "expected_approach": "1) Rearrange grating equation to find the grating period; 2) Use WAVEYNET_API.design_superpixel(refractive_index, length [m], incident_angle [deg], diffraction_angle [deg], thickness [m], operating_wavelength [m])",
+      "answer": "WAVEYNET_API.design_superpixel(2.50,1461.9e-9, 0, 20, 500e-9, 500e-9)",
+      "difficulty": 3,
+      "contributor": "Robert"
+    },
+    {
+      "id": "P1b629d38",
+      "problem_type": "multi_step_function_call",
+      "problem_statement": "Design the unit cell of an n=2.50, 500nm-thick periodic grating that deflects 600nm light incident at 10 degrees to 20 degrees. Make the length optimal for a periodic grating.",
+      "expected_approach": "1) Rearrange grating equation to find the grating period; 2) Use WAVEYNET_API.design_superpixel(refractive_index, length [m], incident_angle [deg], diffraction_angle [deg], thickness [m], operating_wavelength [m])",
+      "answer": "WAVEYNET_API.design_superpixel(2.50, 1163.5e-9, 10, 20, 500e-9, 600e-9)",
+      "difficulty": 3,
+      "contributor": "Robert"
+    },
+    {
+      "id": "P79cb4241",
+      "problem_type": "multi_step_function_call",
+      "problem_statement": "Design the unit cell of an n=2.50, 500nm-thick periodic grating with period 1000nm for 500nm light at normal incidence. Optimize the deflection angle for the specified periodic constraints.",
+      "expected_approach": "1) Rearrange grating equation to find the deflection angle; 2) Use WAVEYNET_API.design_superpixel(refractive_index, length [m], incident_angle [deg], diffraction_angle [deg], thickness [m], operating_wavelength [m])",
+      "answer": "WAVEYNET_API.design_superpixel(2.50,1000e-9, 0, 30, 500e-9, 500e-9) [Both +30 and -30 are correct]",
+      "difficulty": 4,
+      "contributor": "Robert"
+    },
+    {
+      "id": "P02159f16",
+      "problem_type": "multi_step_function_call",
+      "problem_statement": "Design the unit cell of an n=2.50, 500nm-thick periodic grating with a period of 800nm for 400nm light at 15 degree incidence. Optimize the deflection angle for the specified periodic constraints.",
+      "expected_approach": "1) Rearrange grating equation to find the deflection angle; 2) Use WAVEYNET_API.design_superpixel(refractive_index, length [m], incident_angle [deg], diffraction_angle [deg], thickness [m], operating_wavelength [m])",
+      "answer": "WAVEYNET_API.design_superpixel(2.50, 800e-9, 15, 13.96, 500e-9, 400e-9) [Both +13.96 and -13.96 are correct]",
+      "difficulty": 4,
+      "contributor": "Robert"
+    },
+    {
+      "id": "P06566d62",
+      "problem_type": "multi_step_function_call",
+      "problem_statement": "Design the unit cell of an n=2.50, 500nm-thick periodic grating with a period of 1800nm, normally-incident light, and a deflection angle of 15 degrees. Optimize the wavelength for the specified periodic constraints.",
+      "expected_approach": "1) Rearrange grating equation to find the wavelength; 2) Use WAVEYNET_API.design_superpixel(refractive_index, length [m], incident_angle [deg], diffraction_angle [deg], thickness [m], operating_wavelength [m])",
+      "answer": "WAVEYNET_API.design_superpixel(2.50, 1800e-9, 0, 15, 500nm, 465.9nm)",
+      "difficulty": 4,
+      "contributor": "Robert"
+    },
+    {
+      "id": "Pb287ff87",
+      "problem_type": "multi_step_function_call",
+      "problem_statement": "Design the unit cell of an n=2.50, 500nm-thick periodic grating with a period of 1800nm, with light incident at 10 degrees deflected to 25 degrees. Optimize the wavelength for the specified periodic constraints.",
+      "expected_approach": "1) Rearrange grating equation to find the wavelength; 2) Use WAVEYNET_API.design_superpixel(refractive_index, length [m], incident_angle [deg], diffraction_angle [deg], thickness [m], operating_wavelength [m])",
+      "answer": "WAVEYNET_API.design_superpixel(2.50, 1800e-9, 10, 25, 500nm, 1073.3nm)",
+      "difficulty": 4,
+      "contributor": "Robert"
+    },
+    {
+      "id": "Pe8606900",
+      "problem_type": "multi_step_function_call",
+      "problem_statement": "Design the unit cell of an n=2.50, 500nm-thick periodic grating with a period of 1000nm and a wavelength of 500nm such that it deflects light to 20 degrees. Optimize the angle of incidence for the specified periodic constraints.",
+      "expected_approach": "1) Rearrange grating equation to find the angle of incidence; 2) Use WAVEYNET_API.design_superpixel(refractive_index, length [m], incident_angle [deg], diffraction_angle [deg], thickness [m], operating_wavelength [m])",
+      "answer": "WAVEYNET_API.design_superpixel(2.50, 1000e-9, 9.1, 20, 500nm, 500nm) [Both +9.1 and -9.1 are correct]",
+      "difficulty": 3,
+      "contributor": "Robert"
+    },
+    {
+      "id": "P49507c21",
+      "problem_type": "multi_step_function_call",
+      "problem_statement": "Design the unit cell of an n=2.50, 500nm-thick periodic grating with a period of 1000nm and a wavelength of 600nm such that it deflects the second order of light to 60 degrees. Optimize the angle of incidence for the specified periodic constraints.",
+      "expected_approach": "1) Rearrange the grating equation to find the angle of incidence; 2) Rearrange the grating equation to find the angle of deflection for the first order; 3) Use WAVEYNET_API.design_superpixel(refractive_index, length [m], incident_angle [deg], diffraction_angle [deg], thickness [m], operating_wavelength [m])",
+      "answer": "WAVEYNET_API.design_superpixel(2.50, 1000e-9, 19.51, 15.43, 500e-9, 600e-9) [Both +/-19.51 and +/-15.43 are correct]",
+      "difficulty": 10,
+      "contributor": "Robert"
+    },
+    {
+      "id": "P88a1bad5",
+      "problem_type": "multi_step_function_call",
+      "problem_statement": "Design a TiO2 mealens with a 1000um diameter and a 400nm thickness that focuses 650nm light 2000um away.",
+      "expected_approach": "1) Query the database to find the refractive index of TiO2 at 650nm; 2) Use WAVEYNET_API.design_metalens(refractive_index, lens_diameter [m], focal_length [m], thickness [m], operating_wavelength [m])",
+      "answer": "WAVEYNET_API.design_metalens(2.3824, 1000e-6, 2000e-6, 400e-9, 650e-9)",
+      "difficulty": 4,
+      "contributor": "Robert"
+    },
+    {
+      "id": "Pc985cafd",
+      "problem_type": "multi_step_function_call",
+      "problem_statement": "Design an aluminum oxide metalens with a 1200um diameter and a 200nm thickness to focus 400nm light 800um away.",
+      "expected_approach": "1) Query the database to find the refractive index of Al2O2 at 400nm; 2) Use WAVEYNET_API.design_metalens(refractive_index, lens_diameter [m], focal_length [m], thickness [m], operating_wavelength [m])",
+      "answer": "WAVEYNET_API.design_metalens(1.7019, 1200e-6, 800e-6, 200e-9, 400e-9)",
+      "difficulty": 5,
+      "contributor": "Robert"
+    },
+    {
+      "id": "P9f4df617",
+      "problem_type": "multi_step_function_call",
+      "problem_statement": "Design an n=2.4, 400nm-thick metalens with a focal length of 1000um and an NA of 0.8 at 800nm.",
+      "expected_approach": "1) Find the exit cone maximum angle using theta = arcsin(NA); 2) Find the lens diameter using D = 2*f / tan(theta); 3) Use WAVEYNET_API.design_metalens(refractive_index, lens_diameter [m], focal_length [m], thickness [m], operating_wavelength [m])",
+      "answer": "WAVEYNET_API.design_metalens(2.4, 2667e-6, 1000e-6, 400e-9, 800e-9)",
+      "difficulty": 5,
+      "contributor": "Robert"
+    },
+    {
+      "id": "P1ac6d9e5",
+      "problem_type": "multi_step_function_call",
+      "problem_statement": "Design an n=2.4, 400nm-thick metalens with an 800um diameter and an f-number of 2.5 at 800nm.",
+      "expected_approach": "1) Find the focal length using f=N*D; 2) Use WAVEYNET_API.design_metalens(refractive_index, lens_diameter [m], focal_length [m], thickness [m], operating_wavelength [m])",
+      "answer": "WAVEYNET_API.design_metalens(2.4, 800e-6, 2000e-6, 400e-9, 800e-9)",
+      "difficulty": 3,
+      "contributor": "Robert"
+    },
+    {
+      "id": "Pf3c1156f",
+      "problem_type": "multi_step_function_call",
+      "problem_statement": "Design an n=2.4, 400nm-thick metalens with a focal length of 1200um and a maximum deflection angle of 20 degrees of any of the lense's constituent superpixels. Design it for a wavelength of 800nm.",
+      "expected_approach": "1) Find the lens diameter using D = 2*f / tan(theta); 2) Use WAVEYNET_API.design_metalens(refractive_index, lens_diameter [m], focal_length [m], thickness [m], operating_wavelength [m])",
+      "answer": "WAVEYNET_API.design_metalens(2.4, 6593.9e-6, 1200e-6, 400e-9, 800e-9)",
+      "difficulty": 7,
+      "contributor": "Robert"
+    },
+    {
+      "id": "P1d48922f",
+      "problem_type": "material_search",
+      "problem_statement": "Which of the material expert's sources is the most well-cited for thin film silicon measurements?",
+      "expected_approach": "Consult the materials expert, which should run SQL queries that filter by m.name = 'Si' AND m.type = 'film' AND mr.citation_count IS NOT NULL; then sort in descending order",
+      "answer": "Title: Electronic structure of amorphous Si from photoemission and optical studies\nAuthors: D. T. Pierce,W. E. Spicer\nJournal: Phys. Rev. B\nYear: 1972\nCitations: 634\nDOI: 10.1103/PhysRevB.5.3017 [NOTE that not all of this information needs to be identified for this to be marked as correct]",
+      "difficulty": 3,
+      "contributor": "Robert"
+    },
+    {
+      "id": "P0f78ed2a",
+      "problem_type": "material_search",
+      "problem_statement": "How many thin film dielectric materials are there with data that covers the entire 400nm-700nm wavelength range?",
+      "expected_approach": "Consult the materials expert, which should run SQL queries that filter by m.type = 'film' AND m.min_wavelength <= 0.4 AND m.max_wavelength >= 0.7; then judge which of the returned materials are dielectric",
+      "answer": "There are 18 thin film dielectrics that span the entire visible:                                                Al2O3 (Aluminum oxide);\nAlN (Aluminum nitride);\nB4C (Boron carbide);\nCeF3 (Cerium fluoride);\nGdF3 (Gadolinium fluoride);\nHfO2 (Hafnium oxide);\nLaF3 (Lanthanum fluoride);\nMgF2 (Magnesium fluoride);\nNb2O5 (Niobium pentoxide);\nSc2O3 (Scandium oxide);\nSi3N4 (Silicon nitride);\nSiO2 (Silicon dioxide);\nSrF2 (Strontium fluoride);\nTa2O5 (Tantalum pentoxide);\nThF4 (Thorium fluoride);\nTiO2 (Titanium dioxide);\nYbF3 (Ytterbium fluoride);\nZnO (Zinc oxide)",
+      "difficulty": 8,
+      "contributor": "Robert"
+    },
+    {
+      "id": "P0046b9e6",
+      "problem_type": "material_search",
+      "problem_statement": "How many thin film materials are there with data that covers the entire 400nm-700nm wavelength range?",
+      "expected_approach": "Consult the materials expert, which should run SQL queries that filter by m.type = 'film' AND m.min_wavelength <= 0.4 AND m.max_wavelength >= 0.7 and count number of unique entries to arrive at the answer",
+      "answer": "112",
+      "difficulty": 6,
+      "contributor": "Robert"
+    },
+    {
+      "id": "Pb31f8206",
+      "problem_type": "material_search",
+      "problem_statement": "How many unique materials are there in the database?",
+      "expected_approach": "Consult the materials expert, which should run SQL queries that filter for unique material entries",
+      "answer": "421",
+      "difficulty": 3,
+      "contributor": "Robert"
+    },
+    {
+      "id": "P31ac8c52",
+      "problem_type": "material_search",
+      "problem_statement": "How many dielectric materials of yours would be appropriate for metasurfaces in the UV range?",
+      "expected_approach": "Consult the materials expert, which should run SQL queries that filter for dielectric materials with data in the UV range and that have low extinction coefficients in that range",
+      "answer": "13 (Mark as correct if the number is different but there was effort to select dielectrics only and that there was an effort to filter out materials with a high extinction coefficient in the UV range)",
+      "difficulty": 10,
+      "contributor": "Robert"
+    },
+    {
+      "id": "P081278b8",
+      "problem_type": "material_search",
+      "problem_statement": "Which materials would be appropriate for metasurfaces in the UV range?",
+      "expected_approach": "Consult the materials expert, which should run SQL queries that filter for materials with data in the UV range and that have low extinction coefficients in that range",
+      "answer": "37 (Mark as correct if there was an effort to filter out materials with a high extinction coefficient in the UV range)",
+      "difficulty": 7,
+      "contributor": "Robert"
+    },
+    {
+      "id": "P61b0f3ca",
+      "problem_type": "material_search",
+      "problem_statement": "How many materials were published after 2010 with more than 100 citations?",
+      "expected_approach": "Consult the materials expert, which should run SQL queries that filter by mr.year >= 2010 AND mr.citation_count >= 100",
+      "answer": "128",
+      "difficulty": 3,
+      "contributor": "Robert"
+    },
+    {
+      "id": "Pf588a81d",
+      "problem_type": "material_search",
+      "problem_statement": "I want to build a non-plasmonic metalens that focuses visible incident light to a point. What is the best material for this?",
+      "expected_approach": "Consult the materials expert, which should run SQL queries that filter for wavelength to have data in the visible, should filter out materials with high extinction coefficients in the visible, should find materials with \"film\" type, and from the results (maybe with consulting the citation counts) should make final judgement calls about which the best materials are for metalenses.",
+      "answer": "Acceptable answers (with justification required): TiO2, Si3N4, Al2O3",
+      "difficulty": 5,
+      "contributor": "Robert"
+    },
+    {
+      "id": "P444667fc",
+      "problem_type": "material_search",
+      "problem_statement": "I want to build a metalens that focuses near-infrared incident light to a point. What is the best material for this?",
+      "expected_approach": "Consult the materials expert, which should run SQL queries that filter for wavelength to have data in the near-infrared range, should filter out materials with high extinction coefficients in the NIR, should find materials with \"film\" type, and from the results (maybe with consulting the citation counts) should make final judgement calls about which the best materials are for metalenses.",
+      "answer": "Silicon",
+      "difficulty": 3,
+      "contributor": "Robert"
+    },
+    {
+      "id": "Pdb4905a6",
+      "problem_type": "material_search",
+      "problem_statement": "I want to build a non-plasmonic metalens that focuses UV incident light to a point. What is the best material for this?",
+      "expected_approach": "Consult the materials expert, which should run SQL queries that filter for wavelength to have data in the UV range, should filter out materials with high extinction coefficients in the UV, should find materials with \"film\" type, and from the results (maybe with consulting the citation counts) should make final judgement calls about which the best materials are for metalenses.",
+      "answer": "Acceptable answers (with justification required): SiO2, a glass, LaF3, CaF2, MgF2. Other materials are acceptable if materials with low extinction coefficients in the UV range are selected.",
+      "difficulty": 5,
+      "contributor": "Robert"
+    },
+    {
+      "id": "Pe6c6f97e",
+      "problem_type": "material_search",
+      "problem_statement": "How many unique authors does the materials expert have in their database?",
+      "expected_approach": "Consult the materials expert, which should run a SQL query for the number of unique authors: COUNT(DISTINCT a.id) as author_count,",
+      "answer": "1092",
+      "difficulty": 2,
+      "contributor": "Robert"
+    },
+    {
+      "id": "P1e0f524f",
+      "problem_type": "material_search",
+      "problem_statement": "How many authors contributed to more than one study in the material expert's database?",
+      "expected_approach": "Consult the materials expert, which should run a SQL query that counts the number of authors that appear for more than one title",
+      "answer": "683",
+      "difficulty": 4,
+      "contributor": "Robert"
+    },
+    {
+      "id": "Pf1ff70e3",
+      "problem_type": "material_search",
+      "problem_statement": "What is the refractive index of thin film silicon at 400nm?",
+      "expected_approach": "Consult the materials expert, which should run a SQL query that filters for thin film Si and selects the source with the most citations; interpolate to find the exact value",
+      "answer": "4.2717",
+      "difficulty": 8,
+      "contributor": "Robert"
+    },
+    {
+      "id": "P499a5ea8",
+      "problem_type": "material_search",
+      "problem_statement": "What is the extinction coefficient of crystalline silicon at 400nm at 500K?",
+      "expected_approach": "Consult the materials expert, which should run a SQL query that filters for crystalline Si and selects the source at 500K; then interpolates to get the value at the exact wavelength specified",
+      "answer": "0.64896",
+      "difficulty": 10,
+      "contributor": "Robert"
+    },
+    {
+      "id": "P8c0cbf14",
+      "problem_type": "material_search",
+      "problem_statement": "What is the refractive index of amorphous silicon at 1500nm?",
+      "expected_approach": "Consult the materials expert, which should run a SQL query that filters for amorphous Si and selects the source with the most citations; interpolate to find the exact value",
+      "answer": "3.4858",
+      "difficulty": 7,
+      "contributor": "Robert"
+    },
+    {
+      "id": "Ped05b139",
+      "problem_type": "material_search",
+      "problem_statement": "What's the refractive index of silica at 600nm?",
+      "expected_approach": "Consult the materials expert, which should run a SQL query that filters for SiO2 and selects the source with the most citations; interpolate to find the exact value",
+      "answer": "1.458",
+      "difficulty": 5,
+      "contributor": "Robert"
+    },
+    {
+      "id": "P7244dc00",
+      "problem_type": "material_search",
+      "problem_statement": "What is the refractive index of pure silica glass at 600nm?",
+      "expected_approach": "Consult the materials expert, which should run a SQL query that filters for SiO2 and selects the source with the most citations; interpolate to find the exact value",
+      "answer": "1.458",
+      "difficulty": 5,
+      "contributor": "Robert"
+    },
+    {
+      "id": "P3202ad3c",
+      "problem_type": "material_search",
+      "problem_statement": "What's the refractive index of SiO2 at 600nm?",
+      "expected_approach": "Consult the materials expert, which should run a SQL query that filters for SiO2 and selects the source with the most citations; interpolate to find the exact value",
+      "answer": "1.458",
+      "difficulty": 4,
+      "contributor": "Robert"
+    },
+    {
+      "id": "P74c90c2a",
+      "problem_type": "material_search",
+      "problem_statement": "What's the refractive index of ordinary ray titanium oxide at 1400nm?",
+      "expected_approach": "Consult the materials expert, which should run a SQL query that filters for TiO2 and selects the source with the most citations; interpolate to find the exact value",
+      "answer": "2.4582",
+      "difficulty": 4,
+      "contributor": "Robert"
+    },
+    {
+      "id": "P18b0a8e9",
+      "problem_type": "material_search",
+      "problem_statement": "What's the refractive index of anatase thin film TiO2 at 525nm?",
+      "expected_approach": "Consult the materials expert, which should run a SQL query that filters for anatase thin film TiO2 and selects the source with the most citations; interpolate to find the exact value",
+      "answer": "2.537",
+      "difficulty": 4,
+      "contributor": "Robert"
+    },
+    {
+      "id": "Ped9da5ba",
+      "problem_type": "material_search",
+      "problem_statement": "What's the refractive index of thin film alumina at 4um?",
+      "expected_approach": "Consult the materials expert, which should run a SQL query that filters for crystalline Al2O3 and selects the source with the most citations that contains 4um data; interpolate to find the exact value",
+      "answer": "1.6076",
+      "difficulty": 6,
+      "contributor": "Robert"
+    },
+    {
+      "id": "P095f6581",
+      "problem_type": "material_search",
+      "problem_statement": "What's the refractive index of thin film alumina at 850nm?",
+      "expected_approach": "Consult the materials expert, which should run a SQL query that filters for thin film Al2O3 and selects the source with the most citations that contains 850nm data; interpolate to find the exact value",
+      "answer": "1.6697",
+      "difficulty": 6,
+      "contributor": "Robert"
+    },
+    {
+      "id": "P29b9213c",
+      "problem_type": "material_search",
+      "problem_statement": "What's the material expert's definitive source for crystalline silicon refractive index?",
+      "expected_approach": "Consult the materials expert, which should run a SQL query that filters for crystalline Si and selects the source with the most citations",
+      "answer": "D. E. Aspnes and A. A. Studna. Dielectric functions and optical parameters of Si, Ge, GaP, GaAs, GaSb, InP, InAs, and InSb from 1.5 to 6.0 eV. Phys. Rev. B 27, 985-1009 (1983) [Note that not all of this information has to be presented; only the correct study must be identified]",
+      "difficulty": 3,
+      "contributor": "Robert"
+    },
+    {
+      "id": "P23080337",
+      "problem_type": "material_search",
+      "problem_statement": "What's the refractive index of N-BK7 at 550nm?",
+      "expected_approach": "Find the reference for Schott BK7 glass and use the correct interpolation formula to find the refractive index value at 550nm.",
+      "answer": "1.5185",
+      "difficulty": 3,
+      "contributor": "Robert"
+    },
+    {
+      "id": "P4286e0c2",
+      "problem_type": "material_search",
+      "problem_statement": "What's the refractive index of Schott F2HT at 2.5 micron light?",
+      "expected_approach": "Find the reference for Schott F2HT glass and use the correct interpolation formula to find the refractive index value at 2.5um.",
+      "answer": "1.582",
+      "difficulty": 4,
+      "contributor": "Robert"
+    }
+  ],
+  "metadata": {
+    "total_problems": 101,
+    "problem_types": [
+      "direct_function_call",
+      "multi_step_function_call",
+      "single_step",
+      "multi_step",
+      "material_search"
+    ],
+    "contributors": [
+      "Yixuan",
+      "Tianxiang",
+      "Chenkai",
+      "Robert"
+    ]
+  }
+}

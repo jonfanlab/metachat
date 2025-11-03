@@ -1,8 +1,8 @@
 # A multi-agentic framework for real-time, autonomous freeform metasurface design
 
-**Preprint:** [arXiv:2503.20479](https://arxiv.org/pdf/2503.20479)
+**Publication out now in** [Science Advances](https://www.science.org/doi/10.1126/sciadv.adx8006)
 
-This repository is a placeholder for the code accompanying our study, **[A multi-agentic framework for real-time, autonomous freeform metasurface design](https://arxiv.org/pdf/2503.20479)**, which is currently under peer review. We will populate this repository upon completion of the review process.
+This repository hosts the resources accompanying our study, **[A multi-agentic framework for real-time, autonomous freeform metasurface design](https://www.science.org/doi/10.1126/sciadv.adx8006)**.
 
 ## Overview
 
@@ -12,23 +12,37 @@ Near real-time, multi-objective, multi-wavelength autonomous metasurface design 
 - **Agentic Iterative Monologue (AIM):** *A novel agentic system designed to seamlessly automate multiple-agent collaboration, human-designer interaction, and computational tools*
 - **FiLM WaveY-Net:** *A semi-general fullwave surrogate solver, which supports conditional fullwave modeling—enabling simulations with variable conditions, including source angle, wavelength, material, and device topology—while maintaining high fidelity to the governing physics*
 
+![MetaChat framework overview](figs/fig1.png)
+
+## Repository structure
+
+- `metachat-aim/`: Source code for the AIM agentic design stack.
+- `film-waveynet/`: Source code for the FiLM WaveY-Net surrogate solver, including scripts for training and inference (pretrained weights downloadable via [Zenodo](https://zenodo.org/records/15802727), training and validation data downloadable via [Stanford Digital Repository](https://purl.stanford.edu/dq123fg9049); see below).
+
+## Data availability
+
+All data used for training and validation in the study and referenced by the code here (dielectric structures, sources, Ex, Ey, and Hz fields) can be downloaded from the [Stanford Digital Repository](https://purl.stanford.edu/dq123fg9049). Further information can be found on the [Metanet Page](http://metanet.stanford.edu/search/metachat/). The pretrained `best_model.pt` checkpoint is hosted on [Zenodo](https://zenodo.org/records/15802727).
+
 ## Reference
 
-The following BibTeX entry can be used to cite the preprint:
+The following BibTeX entry can be used to cite MetaChat, this code, and data:
 
 ```
-@misc{lupoiu2025metachat,
+@article{lupoiu2025multiagentic,
 	title = {A multi-agentic framework for real-time, autonomous freeform metasurface design},
-	url = {https://arxiv.org/abs/2503.20479},
-	doi = {10.48550/arXiv.2503.20479},
+	volume = {11},
+	url = {https://www.science.org/doi/full/10.1126/sciadv.adx8006},
+	doi = {10.1126/sciadv.adx8006},
 	language = {en},
-	publisher = {arXiv},
-	author = {Lupoiu, Robert and Shao, Yixuan and Dai, Tianxiang and Mao, Chenkai and Edee, Kofi and Fan, Jonathan A.},
+	number = {44},
+	journal = {Science Advances},
+	author = {Lupoiu, Robert and Shao, Yixuan and Dai, Tianxiang and Mao, Chenkai and Edée, Kofi and Fan, Jonathan A.},
 	year = {2025},
-	note = {arXiv:2503.20479 [physics]},
 }
 ```
 
 ## Contact
 
 Corresponding author: jonfan@stanford.edu
+
+If you have any questions or need help setting up either AIM or FilM WaveY-Net, don't hesitate to reach out!
